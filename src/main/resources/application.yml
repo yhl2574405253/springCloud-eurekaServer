@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#用来配置注册中心的账号密码
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: 123
+#    password: admin
